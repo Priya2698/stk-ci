@@ -8,7 +8,7 @@ jobs:
       - name: test_run
         run: |
           echo 'Setup...'
-          sudo python setup.py install
+          python setup.py install --prefix ~/.local
           echo 'Uninstall Triton-2.0.0...'
           pip uninstall triton
           echo 'Install Triton-2.1.0...'

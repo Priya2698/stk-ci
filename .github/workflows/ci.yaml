@@ -9,8 +9,6 @@ jobs:
         run: |
           echo 'Setup...'
           python setup.py install --prefix ~/.local
-          echo 'Uninstall Triton-2.0.0...'
-          pip uninstall -y triton
           echo 'Install Triton-2.1.0...'
           cd third_party/triton/python
           pip install -e .

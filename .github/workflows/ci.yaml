@@ -1,17 +1,12 @@
 name: run-tests
-on:
-  push:
-    branches:
-      - ci-setup
-  workflow_dispatch:
+on: [push]
 jobs:
   linear_tests:
-    runs-on: self-hosted
+    runs-on: [self-hosted, gpu]
     steps:
       - uses: actions/checkout@v3
       - name: test_run
         run: |
           echo 'Running tests'
-          echo pwd
           python setup.py install
           python stk/ops/linear_ops_tests.py

@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - ci-setup
+  workflow_dispatch:
 jobs:
   linear_tests:
     runs-on: self-hosted

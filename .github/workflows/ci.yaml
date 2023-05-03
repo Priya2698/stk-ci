@@ -8,5 +8,5 @@ jobs:
       - name: test_run
         run: |
           echo 'Running tests'
-          python setup.py install
+          sudo python setup.py install
           python stk/ops/linear_ops_tests.py

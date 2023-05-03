@@ -7,4 +7,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: test_run
         run: |
-          echo 'CI Setup Test'
+          echo pwd
+          python setup.py install
+          python stk/ops/linear_ops_tests.py

@@ -4,12 +4,10 @@ jobs:
   linear_tests:
     runs-on: [self-hosted]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: test_run
         run: |
           echo 'Setup...'
           python setup.py install --prefix ~/.local
-          pwd
-          ls
           echo 'Run tests...'
-          python ./stk/ops/linear_ops_tests.py
+          python stk/ops/linear_ops_test.py

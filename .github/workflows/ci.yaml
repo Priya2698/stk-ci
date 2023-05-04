@@ -10,5 +10,6 @@ jobs:
           echo 'Setup...'
           python setup.py install --prefix ~/.local
           pwd
+          ls
           echo 'Run tests...'
           python ./stk/ops/linear_ops_tests.py

@@ -2,7 +2,7 @@ name: run-tests
 on: [push]
 jobs:
   linear_tests:
-    runs-on: [self-hosted]
+    runs-on: [self-hosted, gpu]
     steps:
       - uses: actions/checkout@v3
       - name: linear-ops-tests
